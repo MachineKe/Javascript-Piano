@@ -1,37 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PIANO PIANO</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIANO PIANO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add responsive styles here */
+    @media only screen and (max-width: 600px) {
+      .wrapper {
+        width: 90%;
+        padding: 20px;
+      }
+      .piano-keys {
+        flex-direction: column;
+      }
+      .piano-keys .key {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
 
-    <div class="wrapper">
-      <header>
-        <h2>LET'S HAVE FUN</h2>
-        <div class="column volume-slider">
-          <!-- <span>Volume</span> <input form="" type="range" /> -->
-        </div>
-      </header>
-      <ul class="piano-keys">
-        <li class="key white" id="zKey"><span>z</span></li>
-        <li class="key black" id="aKey"><span>a</span></li>
-        <li class="key white" id="xKey"><span>x</span></li>
-        <li class="key black" id="sKey"><span>s</span></li>
-        <li class="key white" id="cKey"><span>c</span></li>
-        <li class="key black" id="dKey"><span>d</span></li>
-        <li class="key white" id="vKey"><span>v</span></li>
-        <!-- <li class="key black" id="jKey"><span>j</span></li> -->
-        <li class="key white" id="bKey"><span>b</span></li>
-        <li class="key black" id="kKey"><span>k</span></li>
-        <li class="key white" id="nKey"><span>n</span></li>
-        <li class="key black" id="lKey"><span>l</span></li>
-        <li class="key white" id="mKey"><span>m</span></li>
-      </ul>
+<div class="wrapper">
+  <header>
+    <h2>LET'S HAVE FUN</h2>
+    <div class="column volume-slider">
+      <!-- <span>Volume</span> <input form="" type="range" /> -->
     </div>
+  </header>
+  <ul class="piano-keys">
+    <li class="key white" id="zKey"><span>z</span></li>
+    <li class="key black" id="aKey"><span>a</span></li>
+    <li class="key white" id="xKey"><span>x</span></li>
+    <li class="key black" id="sKey"><span>s</span></li>
+    <li class="key white" id="cKey"><span>c</span></li>
+    <li class="key black" id="dKey"><span>d</span></li>
+    <li class="key white" id="vKey"><span>v</span></li>
+    <!-- <li class="key black" id="jKey"><span>j</span></li> -->
+    <li class="key white" id="bKey"><span>b</span></li>
+    <li class="key black" id="kKey"><span>k</span></li>
+    <li class="key white" id="nKey"><span>n</span></li>
+    <li class="key black" id="lKey"><span>l</span></li>
+    <li class="key white" id="mKey"><span>m</span></li>
+  </ul>
+</div>
+
 <audio src="notes/A.mp3" id="zSound"></audio>
 <audio src="notes/Ab.mp3" id="aSound"></audio>
 <audio src="notes/B.mp3" id="xSound"></audio>
@@ -45,6 +60,6 @@
 <audio src="notes/G.mp3" id="lSound"></audio>
 <audio src="notes/Gb.mp3" id="mSound"></audio>
 
-    <script src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
